@@ -19,7 +19,7 @@ var mailOptions = {
 
 transporter.sendMail(mailOptions, function(error, info){
   if (error) {
-    throw(error);
+    throw new Error('uh oh');
   } else {
     console.log('Email sent: ' + info.response);
   }
